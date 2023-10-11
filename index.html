@@ -21,7 +21,11 @@
         width: 60vw;
         height: 40vw;
         display: flex;
-        background-color: black;
+        /* background-color: black; */
+      }
+      .card__back,
+      .card__front {
+        backface-visibility: hidden;
       }
     </style>
   </head>
@@ -50,13 +54,13 @@
         let randomNumberArr = [];
         for (let i = o; i < imgList.length; i++) {
           let randomNumber = getRandom(imgList[i], 0);
-
           if (randomNumberArr.indexOf(randomNumber) === -1) {
             randomNumberArr.push(randomNumber);
           } else {
             i--;
           }
         }
+        console.log('randomNumberArr');
       }
 
       function getRandom(max, min) {
