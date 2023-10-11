@@ -42,6 +42,17 @@
         'whale.png',
         'penguin.png',
       ];
+
+      function makeCard() {
+        let randomNumberArr = [];
+        for (let i = o; i < imgList.length; i++) {
+          let randomNumber = getRandom(imgList[i], 0);
+
+          if (randomNumberArr.indexOf(randomNumber) === -1) {
+            randomNumberArr.push(randomNumber);
+          }
+        }
+      }
     </script>
   </body>
 </html>
