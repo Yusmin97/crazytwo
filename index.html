@@ -27,7 +27,10 @@
   </head>
   <body>
     <div id="root">
-      <div></div>
+      <div class="card" data-id="1" data-card="whale">
+        <div class="card__back"></div>
+        <div class="card__front"></div>
+      </div>
     </div>
     <script>
       const imgList = [
@@ -50,8 +53,18 @@
 
           if (randomNumberArr.indexOf(randomNumber) === -1) {
             randomNumberArr.push(randomNumber);
+          } else {
+            i--;
           }
         }
+      }
+
+      function getRandom(max, min) {
+        return parseInt(Math.random() * (max - min)) + min;
+      }
+
+      function shuffle(array) {
+        array.sort(() => Math.random() - 0.5);
       }
     </script>
   </body>
